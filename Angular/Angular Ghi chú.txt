@@ -1,0 +1,63 @@
+Cài đặt Angular:
+
+	*Khoa Phạm	
+
+	npm install -g @angular/cli :			mở CMD cài vào
+	ng new nameProject :				cài project Angular
+	cd nameProject:				vào bên trong project
+	ng serve --open :				chạy server Angular
+	ng g c nameComponent :			tạo Component		Hoặc 	tạo tay ( a-comment-inline, a-module-inline)		
+	ng add @ng-bootstrap/ng-bootstrap:		cài đặt Bootstrap vào Angular
+	npm install font-awesome --save:		câu lệnh chèn icon (chèn câu lệnh này "node_modules/font-awesome/css/font-awesome.css" vào angular.json)
+	ng new nameproject --routing:		tạo link trang con
+	ng g s name_conponent/name_service:	tạo service trong Angular
+	npm install ngx-pagination --save:		tạo phân trang trong Angular
+	ng-untouched ng-pristine ng-valid:		cài đặt validate form
+	npm install ngx-socket-io:			cài đặt socket cho Angular
+	npm 
+
+	* Cybersoft ( password file PDF: Cybersoft@2020 )
+	
+	a-component-inline (cài trong vscode Angular Snippets)
+	a-module ( tạo Angular module cho quản lý các component ví dụ: ...module.ts)
+	Chèn thẻ link (head) và script (body) vào File índex.html thì đã sử dụng Bootstrap ở bất kì component nào trong Angular
+	Add all missing imports :  			( Typescript hỗ trợ add Import các file thiếu bằng cách nhấn vào bóng đèn chọn )
+	Import FormsModule và NgModule: 		module sử dụng cho Two way binding, import trong thẻ ...module.ts (@angular/form)
+	Import CommonModule :			 Là thư viện của angular để định nghĩa các structural directive ( *ngif, *ng..., *ng...)
+	ng-container : 					sử dụng khi ngif và ngfor cùng lúc sử dụng sẽ đụng nhau
+	ng-content :					là chuyển giao diện từ component cha sang con
+	b4-modal-customize : 				khai báo HOC trên productlist (nhớ để data toggle và data target vào cái nút mua hàng button ở product)
+	@Input :					sử dụng khi truyền DL từ component cha --> component con
+	@Output :					sử dụng khi truyền DL thông qua 1 cái sự kiện từ component con --> component cha
+	Import Output và EvenEmiter :		Output là chuyền dữ liệu từ componetn con --> component cha (@angular/core)
+	Viewchild và ElementRef : 			ElementRef là thẻ HTML, Thẻ component thì kiểu dữ liệu là lớp đối tượng (class) định nghĩa thẻ đó (...comprnent)
+	Viewchildren và QueryList :			ViewChildren dùng để dom đến các thẻ trên giao diện dựa vào Class tạo ra component đó
+	RouterModule.forChild(homeRoutes) : 	links các page component vs nhau ( có 2 loại 1 là load ra giao diện trực tiếp component, 2 là load ra module -> component)
+	RouteeModule.forRoot(appRoutes) :		Như trên
+	a-service-httpclient : 				kết nối API  => trả về dữ liệu
+	ActivatedRoute : 				để lấy dữ liệu thông qua params.subscrise
+	Truyền dữ liệu thông qua Params metter: 	detail/maPhim
+	a-http-intercepter( cấu hình intercepter cho những cái API gửi về cho backend), lấy DL từ form ( register, login)
+	a-guard-can-activate (Guard) :			chặn ng dùng vào 1 trang nào đó khi mà họ ko có quyền truy cập
+	a-guard-can-deactuvate (Guard) :		chặn ng dùng thoát ra 1 trang web khi họ đang sử dụng
+	ng add ng-zorro-antd :				cài Antd Design cho Angular
+	Lỗi 401 (ko có token), lỗi 403 (token ko đủ quyền truy cập)
+	a-pipe ( name.pipe.ts) :			cài pipe để rút gọn các nội dung của mảng ký tự , ...
+	Lifecycle : 					ngOnChanges ( nó sẽ lưu trữ trạng thái trước và sau khi change của component khi vừa đc khởi tạo, đồng thời nó sẽ chạy trc Oninit và sau mỗi lần input thay đổi thì sẽ thực thi)
+							ngOnInit 	(sẽ thực thi (chạy) sau khi HTML render giao diện xong => giống componentDidmount hoặc UseEffec có dấu ngoặc [ ] )
+							ngDocCheck 
+							ngOnDestroy 	(dùng để clear các biến chạy ngầm khi comp mất khỏi giao diện, giống comWillunmount dùng để hủy các comp khi mà các comp ko còn xuất hiện trên giao diện nữa)
+							Nhét OnChanges vào export class rồi click phải childcomponent chọn => Implement interface Onchanges
+	Service là nơi quản lý các phương thức giao tiếp vs API
+	npm install @ngrx/store --save : 		Cài Ngrx ( giống BihaviorSubject và giống Redux)
+	npm i @angular/service-worker : 		
+	ng build : 					Video buổi 8 Angular (1h14') file Angular.json (dòng 63) chỉnh sửa lại dung lượng MB
+	
+
+	
+	
+	npm i lodash và npm i --save-dev @types/lodash : cài lodash ( thư viện giúp mình xử lý những cái object, mảng dễ dàng hơn)
+	ng add @angular/material :			cài material chọn No tự setup
+	npm i  bootstrap@4.3.1 jquery popper.js : 	cài bootstrap cho angular  import ở file angular.json dòng 38 video buổi 4 1h32p40' ( nhớ xóa 2 thẻ link và script cỉa file Index.html)
+	npm install primeng --save và npm install primeicons --save : cài PrimeNG
+	Cài thư viện nhớ chọn verson Angular/core là mấy

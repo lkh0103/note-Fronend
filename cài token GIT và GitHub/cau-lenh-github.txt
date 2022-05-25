@@ -1,0 +1,38 @@
+CACH UPLOAD DU AN TAI MAY TINH LEN WEB GITHUB
+
+	git config --global user.name "username"
+
+	git config --global user.email "email"
+
+	git clone <paste link du an tren web github>
+
+SAU DO TREN MAY TINH SE SINH RA 1 FOLDER CHUA CAC FILE GIONG NHU TREN GITHUB
+
+SAU DO COPY TOAN BO FOLDER DU AN TREN MAY TINH VAO FOLDER WEB VA CLICK CHUOT PHAI CHON GIT BASH HERE DE MO GIT TAI DAY
+
+	git status (dung de kiem tra trang thai cua cac file trong folder web) => luc nay cac folder (hoac file) trong folder nay se hien thi mau do (cau lenh nay co the khong can su dung cung khong sao)
+
+	git add . (dung de xac nhan nhung folder va file nao can upload tu folder web len web github) => dau . mang y nghia la tat ca folder web se upload len web github, con neu muon chon rieng 1 folder(hoac file) cu the thi thay . = ten folder(hoac ten file) can up load
+
+	git status (dung de kiem tra trang thai cua cac folder duoc chon de upload len web github) => luc nay nhung folder duoc chon se hien thi mau xanh la cay (cau lenh nay co the khong can su dung cung khong sao)
+
+	git commit -m "ghi noi dung kem theo cac folder upload len web github" (dung de biet nhung folder upload len la code nhung gi trong do)
+
+	git push origin main (hoac la master hoac 1 ten tu dat tuy vao setting) => luc nay du an se duoc upload tu may tinh len web github
+
+SAU KHI UPLOAD XONG TA CUNG CO THE SU DUNG LAI CAU LENH GIT STATUS DE KIEM TRA LAI
+
+
+cách upcode lên Github:
+	+	git checkout -b dev (master)
+	+	git add .
+	+	git commit -m '.....'
+	+	git push origin dev
+
+cách chạy project trên github:
+	+	git init
+	+	git add .
+	+	git commit -m '...'
+	+	git remote add origin https://github.com/lkh0103/react-hook-huylam.git ( coppy câu lệnh trên github)
+	+	git push origin master
+	

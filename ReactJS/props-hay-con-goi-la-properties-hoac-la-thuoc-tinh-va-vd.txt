@@ -1,0 +1,56 @@
+KHAI NIEM PROPS TRONG 1 THE (TAG) BINH THUONG:
+
+	1. props la thuoc tinh cua 1 the (trong 1 the gom nhieu thuoc tinh khac nhau, moi thuoc tinh khac nhau duoc xem la 1 props)
+
+	2. khi ta thay doi gia tri cua props thi giao dien se thay doi theo
+
+KHAI NIEM PROPS TRONG COMPONENT:
+
+	1. props la thuoc tinh mac dinh cua component va chi nhan cac thuoc tinh truyen vao tu component cha
+
+	2. props component con se khong the chinh sua thuoc tinh duoc
+
+	3. rcc va rfc co cach su dung props khac nhau
+
+
+
+---------------------------------------------------------------------------------------------
+
+VD PROPS:
+
+	1. trong folder src, ta se tao ra folder Props, trong folder Props se tao them folder DemoProps
+
+	2. trong folder DemoProps, ta se tao ra 2 file lan luot la DemoProps.js va Card.js theo phuong thuc rcc (cau truc thu muc luc nay se la: folder src > folder Props > DemoProps > file DemoProps.js va file Card.js)
+
+	3. trong file App.js, ta se truyen component DemoProps vao (luc nay DemoProps duoc dat trong file App.js)
+
+	4. trong file Card.js, ta su dung cu phap b4-card-background cua bootstrap de tao ra giao dien
+
+	5. sau khi tao ra giao dien card bang bootstrap, ta se import nhieu (vd: 3 lan) component Card vao component DemoProps (nghia la bay gio component Card se la con va component DemoProps la cha)
+
+	6. khi nay giao dien se hien thi 3 component card len giao dien (thong tin hien thi len giao dien gom: hinh anh, title, text) va duoc goi la tai su dung component (trong truong hop nay la du lieu tren 3 component card la giong nhau)
+
+	7. nhung trong truong hop muon tai su dung nhung moi component Card se co thong tin khac nhau, de lam duoc nhu vay ta se su dung Props
+
+	8. tai component DemoProps (component cha), ta se tu dinh nghia thuoc tinh va gia tri cho component Card (component con) bang cach them Props vao component Card trong return cua ham render
+
+	9. trong truong hop nay se la vd: component Card dau tien <Card hoTen="Si" />, component Card thu 2 <Card hoTen="Khanh" />, component Card thu 3 <Card hoTen="Khai" />
+
+	10. sau khi ta dinh nghia props trong component cha, ta se qua component con tao 1 bien voi ten bat ki (vd ten bien se la name) de nhan props tu component cha truyen vao (props cua component cha la hoTen)
+
+	11. vi vay doan code o component con (file Card.js) viet trong ham render se la: let name = this.props.hoTen va su dung phuong phap databinding de dat bien name ( {name} ) vao noi can hien thi ra giao dien
+
+	12. luc nay giao dien se hien thi ra 3 component Card nhung noi dung se khac nhau
+
+	13. neu tai component cha ta dinh nghia them 1 props nua vao component con (props moi duoc them vao la tuoi)
+
+	14. trong truong hop nay se la: component Card dau tien <Card hoTen="Si" tuoi={18} />, component Card thu 2 <Card hoTen="Khanh" tuoi={19} />, component Card thu 3 <Card hoTen="Khai" tuoi={20} />
+
+	15. tai component con ta cung se lam tuong tu nhu name, ta se tao 1 bien de nhan them props tu component cha truyen vao (let age = this.props.tuoi) va su dung phuong phap databinding de truyen du lieu vao noi can hien thi len giao dien
+
+	16. khi component con nhan nhieu props tu component cha, ta se su dung cach viet ngan gon hon goi la boc tach phan tu thay vi tao nhieu bien de chua cac props, ta se tao 1 doi tuong (object)
+
+	17. code luc nay tai component con se rut gon thanh: let {hoTen,tuoi} = this.props va xoa di 2 doan code tao bien name va age (su dung cach viet nay ta se bo 10., 11. va 15.)
+
+	18. luu y: voi cach viet nay, tai component cha (DemoProps.js) ta dinh nghia ten props la gi thi tai component con (Card.js) ta se tao 1 doi tuong voi ten thuoc tinh trung voi ten props cua component cha va se databinding ten props vao noi can hien thi len giao dien
+	

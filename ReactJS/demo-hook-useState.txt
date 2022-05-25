@@ -1,0 +1,44 @@
+CU PHAP KHI SU DUNG USESTATE:
+
+	- dau tien muon su dung react hook useState, ta phai import tu thu vien vao: {useState}
+
+	- tren ham return mac dinh, ta se khai bao 1 mang hon hop [] = useState()
+
+		- cu phap luc nay la: let [ ] = useState()
+
+	- tiep theo ta se khai bao phan tu dau tien cua mang hon hop la state, phan tu thu hai la setState
+
+		- cu phap luc nay la: let [state, setState] = useState()
+
+	- trong ham useState() ta se khai bao 1 doi tuong mac dinh (trong vd nay doi tuong mac dinh co thuoc tinh voi gia tri la: like: 1)
+
+		- cu phap luc nay la: let [state, setState] = useState({like:1})
+
+	- sau do ta su dung databinding de thay the du lieu tinh thanh du lieu dong tai noi can su dung: {state.like}
+
+	- cung giong nhu class component, sau khi khai bao state xong thi ta se khai bao den setState
+
+	- trong demo nay, ta muon khi nhan nut button like thi gia tri like se tang them 1, nen ta se dat su kien onClick trong nut button like
+
+	- cu phap se la: 	onClick ={() => {
+					setState({
+						like: state.like + 1
+					})
+				}}
+
+	- ket qua la sau khi bam nut button like thi functional component se render lai va se cap nhat lai state moi
+
+LUU Y:
+	
+	- trong mang hon hop, phan tu state va phan tu setState ta co the dat ten khac cho phu hop voi ten cua chuc nang, khong nhat thiet phai luon dat ten la state va setState
+
+	- Let la de khai bao 1 bien nhung bien do gia tri co the thay doi
+
+	- Const cung la de khai bao bien nhung khong thay doi gia tri duoc
+
+
+
+
+
+
+
