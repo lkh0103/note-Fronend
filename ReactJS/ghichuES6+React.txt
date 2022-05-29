@@ -1,0 +1,123 @@
+
+1/ ES6
+                  CRUD
+                          C: Creat (Object)
+                          R: Read ( Keywork)
+                          U: Update (id, ObjectUpdate)
+                          D: Delete(id)
+
+            Let, Const, Switch, Case, Sự kiện Onclick, Arrow Function
+	For of		 ( sử dụng duyệt những phần tử liên quan đến Obj, string, mảng)
+	For in 		 ( sử dụng duyệt những phần tử liên quan đến mảng, duyệt các key của Obj)
+	Let  		( là giá trị đẻ khai báo biến nhưng biến đó giá trị có thể thay đổi)
+	Const 	 	( cũng khai báo biến nhưng giá trị không thay đổi)
+
+2/ ReactJS
+	npm install -g create-react-app ( tạo fw reactjs)
+	npx create-react-app reactbc15 ( tạo project ReactJS)
+	open terminal file Package.Json
+	npm i react-router-dom@5.3.0 (cài đặt thư viện router dom để chia các component)
+	npm i axios (cài đặt API cho react)
+	npm i redux-thunk (cài đặt MIDDLEWARE)
+	npm install formik --save :  Là cài thư viện Formik thay thế cho sự kiện handle và validation(yup)
+	npm i yup (cài thư viện thay thế cho validation ko cần phải If else như trước)
+	npm i history@4.10.0 ( cài thư viện chuyển hướng trang bất kì ở ReactJS mà ko cần đến history.push)
+	npm i redux react-redux
+	npm install antd --save
+	npm install --save -exact sass@1.42.1
+	npm install --save -exact axios@0.23.0
+	npm install --save -exact moment@2.29.1
+	npm install --save -exact react-router-dom@5.3.0
+	npm install --save -exact bootstrap@5.1.3
+
+	npm start ( mở dự án project)
+	npm run build
+	npm test
+	npm run eject
+	npm install -g serve
+ 	serve -s build
+	cd reactbc15, npm start
+	
+	Rfc bên UI
+	Rcc (react class component)
+	Import tự đọng hoặc tay vào App.JS
+	Databinding dùng dấu {}, sử dụng {this.render...} là do sử dụng phương thức render ngoài
+	Render các thẻ Div đồng cấp bằng cách để các Div trong mảng. VD: [<div>1</div>, <div>1</div>, ....]
+	State:
+		+  Nơi đặt thuộc tính State phải chứa giao diện hiển thị của state đó (trực tiếp hoặc gián tiếp)
+		+  Nơi đặt thuộc tính State phải chứa nút xử lý làm thay đổi state (trực tiếp hoặc gián tiếp)
+	Map (tham số 1, tham số 2 là index)
+	Props giống State: là thuộc tính có sẵn trong Rcc =>nhận giá trị từ nơi sử dụng component này truyền vào
+	Muốn xài 'fa fa-card' thì cài fa-4 là link của Bootstrap vào file index.html
+
+	Set up và cài đặt Redux Store:
+		+ npm i redux react-redux ( trong terminal vscode hoặc Git)
+		+ Rxreducer ( cú pháp code tạo nhanh Reducer trong VScode)
+		+ import { combineReducers, createStore } from "redux";
+
+		   const rootRuducer = combineReducers({
+   			//Nơi chứa toàn bộ state của ứng dụng (Thay vì đặt dưới this.state của component)
+		   });
+
+		   export const store = createStore(rootRuducer)
+
+		+ Rồi vào file Index.js cấu hình thêm ( Import ... from ..., và sau đó thêm thẻ <provider></provider>
+		+ Kết nối vs Store  thì import {connect} from 'react-redux' bỏ đi export mà thay thế thêm Export default trước hàm Connect
+		+ MapStateToProps: hàm kết nối vs Redux bằng mapStateToProps
+		+ MapdispatchToProps : đưa dữ liệu lên Redux (null, mapdispatchToProps)
+
+	Cách chèn hình từ public <div style={{ backgroundImage: 'url("./img/gameXucXac/bgGame.png")' }}>  
+	Cách chèn hình từ Source đến Assets thì phải tạo 1 file Css riêng, sau đó import đường dẫn file Css vào component của react đó, sau đó viết className chèn thuộc tính Css đó vào là xong
+
+	LIFECYCLE:
+		+ Khi call API thì ngta sẽ gọi LFC nào? --> Sẽ gọi ở componentDidmount, bởi vì api lấy DL về thì DL phải đc load trên giao diện cho nên hàm render sẽ chạy trước
+		+ Purecomponent là j? --> là lớp đối tượng giống component nhưng mà nó ko có LFC là shouldcomponentupdate bởi vì nó sẽ nhận biết những cái giá trị props đầu vào là giá trị nguyên thủy (ko phải Object, Arr)
+
+	RFC:
+		+ Route : npm i react-router-dom@5.3.0 (cài đặt thư viện router dom để chia các component)
+		+ UseEffect có thể thay thế 3 LFC: 
+			-  ComponentDidMount : thường sẽ gọi API ở đây
+			-  ComponentDidUpdate : khi mà 1 state thay đổi mà muốn kéo theo 1 state khác nó tự động set theo ( so sánh những DL cơ bản)
+			-  ComponentWillUnmount : hủy đi những chạy ngầm khi component đó mất đi giao diện
+		+ Usememo và UseCallback:
+			-  Tối ưu render component thì xài UseMemo
+			-  Tối ưu hàm thì xài UseCallback ( Lưu giữ giá trị khi mình setState )
+		+ UseRef:
+			-  Lưu giữ giá trị của component sau mỗi lần setState
+		+ UseSelector và UseDispatch:
+			- Thay thế cho mapSateToProps và mapDispatchToProps
+
+	React API (cài đặt API cho react):
+		+ npm i axios
+	
+	React Midleware (là cách đưa dữ liệu của API lên Redux)
+		+ npm i redux-thunk
+	Token:
+		+ Authorization :
+			- Lỗi 401: chưa đăng nhập nên bị lỗi
+			- Lỗi 403: Token chưa đủ quyền truy cập (hoặc đăng nhập)
+		+ Formik: Thay thế cho  các sự kiện handle (UseState) và validation (Yup)
+			- npm install formik --save ( cài thư viện cho sự kiện Handle)
+			- npm i yup (cài thư viện thay thế cho validation ko cần phải If else như trước)
+			- onBlur : khi mà con trỏ chuột đó rời khỏi sẽ bắt lỗi validation
+			- npm i history@4.10.0 ( cài thư viện chuyển hướng trang bất kì ở ReactJS mà ko cần đến history.push)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
